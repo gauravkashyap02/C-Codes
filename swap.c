@@ -1,18 +1,21 @@
 #include<stdio.h>
 int main(){
-    int a;
-    printf("Enter your first no:");
-    scanf("%d",&a);
 
-    int b;
-    printf("Enter your second no:");
-    scanf("%d",&b);
+    char ch;
+    printf("Enter your characters:");
+    scanf("%c",&ch);
 
-    a=a+b;
-    b=a-b;
-    a=a-b;
+    if(ch>='A' && ch <='Z' || ch>='a' && ch<='z'){
+        printf("Alphabets");
+    }
 
-    printf("Reverse no is a=%d  and b=%d",a,b);
-    
+    else if(ch>='0' && ch<='9'){
+        printf("Digit");
+    }
+
+    else{
+        printf("Special Character");
+    } 
+
     return 0;
 }
